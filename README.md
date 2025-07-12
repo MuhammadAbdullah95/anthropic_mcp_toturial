@@ -18,6 +18,11 @@ MCP Chat is a command-line interface application that enables interactive chat c
 
 ```
 ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
+                    OR
+GEMINI_API_KEY=""  # Enter your Gemini API secret key
+                    OR
+OPENAI_API_KEY="" # Enter your Gemini API secret key
+
 ```
 
 ### Step 2: Install dependencies

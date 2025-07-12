@@ -91,7 +91,21 @@ Use the 'edit_document' tool to edit the document. After the document has been r
 
 
 # TODO: Write a prompt to summarize a doc
+@mcp.prompt(
+    name="Summarize",
+    description="Summarize the Document"
+    )
+def summarize_document(doc_id:str = Field(description="ID of the document to summarize")) -> list[base.Message]:
+    prompt = f"""
+Your goal is to summarize a document to be written in effective way and effective summary.
 
+The id of the document you need to summarize is:
+<document_id>
+{doc_id}
+</document_id>
+
+provide the summary of the document...
+"""
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")
